@@ -3,8 +3,8 @@ package so.somqr.payment.somqr.p2p.service;
 import org.junit.jupiter.api.Test;
 import so.somqr.payment.domain.P2PSomQrPayload;
 import so.somqr.payment.service.P2PQrDecoder;
+import so.somqr.payment.service.impl.P2PQrDecoderImpl;
 import so.somqr.payment.util.CrcCalculator;
-
 
 import java.math.BigDecimal;
 
@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class P2PQrDecoderTest {
 
-    private final P2PQrDecoder decoder = new P2PQrDecoder();
+    private final P2PQrDecoder decoder = new P2PQrDecoderImpl();
 
     @Test
     void shouldDecodeP2pPayload() {
