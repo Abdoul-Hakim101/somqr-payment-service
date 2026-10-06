@@ -6,18 +6,18 @@ import so.somqr.payment.domain.P2PSomQrPayload;
 import so.somqr.payment.domain.Tlv;
 import so.somqr.payment.exception.ApiException;
 import so.somqr.payment.util.CrcCalculator;
-import so.somqr.payment.util.P2pSomQrDecoder;
+import so.somqr.payment.util.P2PSomQrDecoder;
 
 import java.math.BigDecimal;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class P2pQrDecoder {
+public class P2PQrDecoder {
 
     public P2PSomQrPayload decode(String qrPayload) {
         String crc = CrcCalculator.validateP2p(qrPayload);
-        List<Tlv> fields = P2pSomQrDecoder.decodeP2p(qrPayload);
+        List<Tlv> fields = P2PSomQrDecoder.decodeP2p(qrPayload);
 
         return new P2PSomQrPayload(
                 valueOf(fields, "00"),

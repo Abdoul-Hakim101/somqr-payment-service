@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import so.somqr.payment.dto.DecodeP2pQrRequest;
 import so.somqr.payment.dto.P2PQrResponse;
-import so.somqr.payment.service.P2pQrDecoder;
+import so.somqr.payment.service.P2PQrDecoder;
 import so.somqr.payment.util.RequestUtils;
 import so.somqr.payment.util.Response;
 
@@ -22,7 +22,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class P2PQrController {
 
-    private final P2pQrDecoder p2pQrDecoder;
+    private final P2PQrDecoder p2pQrDecoder;
 
     @PostMapping("/decode")
     public ResponseEntity<Response> decode(@Valid @RequestBody DecodeP2pQrRequest request, HttpServletRequest httpRequest) {

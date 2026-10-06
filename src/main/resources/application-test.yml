@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: test
+
+server:
+  port: 0
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+
+cors:
+  allowed-origins: http://localhost:3000

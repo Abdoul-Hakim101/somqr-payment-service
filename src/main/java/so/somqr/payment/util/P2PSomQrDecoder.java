@@ -9,11 +9,11 @@ import java.util.List;
 /**
  * Parses a SomQR payload into its top-level TLV fields.
  */
-public final class P2pSomQrDecoder {
+public final class P2PSomQrDecoder {
 
     private static final int HEADER_LENGTH = 4;
 
-    private P2pSomQrDecoder() {
+    private P2PSomQrDecoder() {
         // Utility class; do not instantiate.
     }
 
