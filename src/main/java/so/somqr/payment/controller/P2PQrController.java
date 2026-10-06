@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import so.somqr.payment.dto.DecodeP2pQrRequest;
+import so.somqr.payment.dto.DecodeP2PQrRequest;
+import so.somqr.payment.dto.GenerateP2PQrRequest;
 import so.somqr.payment.dto.P2PQrResponse;
 import so.somqr.payment.service.P2PQrDecoder;
+import so.somqr.payment.service.P2PQrGenerator;
 import so.somqr.payment.util.RequestUtils;
 import so.somqr.payment.util.Response;
 
@@ -23,9 +25,10 @@ import java.util.Map;
 public class P2PQrController {
 
     private final P2PQrDecoder p2pQrDecoder;
+    private final P2PQrGenerator p2pQrGenerator;
 
     @PostMapping("/decode")
-    public ResponseEntity<Response> decode(@Valid @RequestBody DecodeP2pQrRequest request, HttpServletRequest httpRequest) {
+    public ResponseEntity<Response> decode(@Valid @RequestBody DecodeP2PQrRequest request, HttpServletRequest httpRequest) {
         var payload = p2pQrDecoder.decode(request.payload());
         Response response = RequestUtils.getResponse(
                 httpRequest,
@@ -36,4 +39,18 @@ public class P2PQrController {
         return ResponseEntity.ok(response);
     }
 
+    @PostMapping("/generate")
+    public ResponseEntity<Response> generate(
+            @Valid @RequestBody GenerateP2PQrRequest request,
+            HttpServletRequest httpRequest
+    ) {
+        String payload = p2pQrGenerator.generate(request);
+        Response response = RequestUtils.getResponse(
+                httpRequest,
+                Map.of("payload", payload),
+                "P2P QR code generated successfully",
+                HttpStatus.OK
+        );
+        return ResponseEntity.ok(response);
+    }
 }

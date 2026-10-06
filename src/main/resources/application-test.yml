@@ -1,16 +1,16 @@
-spring:
-  config:
-    activate:
-      on-profile: test
+# Profiles
+SPRING_PROFILES_ACTIVE: test
 
-server:
-  port: 0
+# Server
+SERVER_PORT: 0
 
-springdoc:
-  api-docs:
-    enabled: false
-  swagger-ui:
-    enabled: false
+# springdoc
+SPRING_DOC_API_DOCS_ENABLED: false
+SPRING_DOC_SWAGGER_UI_ENABLED: false
 
-cors:
-  allowed-origins: http://localhost:3000
+# cors
+CORS_ALLOWED_ORIGINS: http://localhost:3000
+
+# SOMQR P2P
+SOMQR_P2P_SCHEME_IDENTIFIER: "01"
+SOMQR_P2P_FI_NAME: "Galaxy International Bank"
