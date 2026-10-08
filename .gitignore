@@ -33,3 +33,8 @@ build/
 .vscode/
 
 logs
+
+# Local environment configuration
+.env
+.env.*
+!.env.example

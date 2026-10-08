@@ -1,0 +1,11 @@
+services:
+  somqr-payment-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: somqr-payment-service:local
+    env_file:
+      - .env
+    ports:
+      - "${SERVER_PORT:-8080}:${SERVER_PORT:-8080}"
+    restart: unless-stopped
