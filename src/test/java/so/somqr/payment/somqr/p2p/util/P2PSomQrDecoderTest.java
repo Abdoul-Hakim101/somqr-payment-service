@@ -1,4 +1,4 @@
-package so.somqr.payment.somqr.util;
+package so.somqr.payment.somqr.p2p.util;
 
 import org.junit.jupiter.api.Test;
 import so.somqr.payment.domain.Tlv;

@@ -1,6 +1,6 @@
 package so.somqr.payment.service;
 
-import so.somqr.payment.dto.GenerateP2PQrRequest;
+import so.somqr.payment.dto.Request.GenerateP2PQrRequest;
 
 public interface P2PQrGenerator {
 

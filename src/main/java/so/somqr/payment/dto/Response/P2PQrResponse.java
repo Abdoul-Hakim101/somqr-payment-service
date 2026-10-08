@@ -1,4 +1,4 @@
-package so.somqr.payment.dto;
+package so.somqr.payment.dto.Response;
 
 import so.somqr.payment.domain.P2PSomQrPayload;
 

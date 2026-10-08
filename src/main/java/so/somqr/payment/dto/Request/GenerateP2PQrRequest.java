@@ -1,4 +1,4 @@
-package so.somqr.payment.dto;
+package so.somqr.payment.dto.Request;
 
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;

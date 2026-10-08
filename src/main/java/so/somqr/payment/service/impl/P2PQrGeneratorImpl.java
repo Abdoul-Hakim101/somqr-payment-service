@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import so.somqr.payment.domain.P2PSomQrPayload;
 import so.somqr.payment.domain.Tlv;
-import so.somqr.payment.dto.GenerateP2PQrRequest;
+import so.somqr.payment.dto.Request.GenerateP2PQrRequest;
 import so.somqr.payment.exception.ApiException;
 import so.somqr.payment.service.P2PQrGenerator;
 import so.somqr.payment.util.CrcCalculator;

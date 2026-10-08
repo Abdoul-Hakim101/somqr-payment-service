@@ -3,7 +3,7 @@ package so.somqr.payment.somqr.p2p.service;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.util.ReflectionTestUtils;
-import so.somqr.payment.dto.GenerateP2PQrRequest;
+import so.somqr.payment.dto.Request.GenerateP2PQrRequest;
 import so.somqr.payment.exception.ApiException;
 import so.somqr.payment.service.impl.P2PQrGeneratorImpl;
 import so.somqr.payment.util.CrcCalculator;
