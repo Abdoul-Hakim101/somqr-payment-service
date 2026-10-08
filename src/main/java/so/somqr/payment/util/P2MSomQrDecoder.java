@@ -75,6 +75,7 @@ public final class P2MSomQrDecoder {
         int numericTag = Integer.parseInt(tag);
         return (numericTag >= MERCHANT_ACCOUNT_INFO_MIN_TAG
                 && numericTag <= MERCHANT_ACCOUNT_INFO_MAX_TAG)
+                && numericTag != 31
                 || ADDITIONAL_DATA_TAG.equals(tag);
     }
 }

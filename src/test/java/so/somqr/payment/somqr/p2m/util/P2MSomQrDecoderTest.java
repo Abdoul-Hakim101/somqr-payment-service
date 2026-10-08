@@ -44,8 +44,8 @@ class P2MSomQrDecoderTest {
                 .findFirst()
                 .orElseThrow();
 
-        assertEquals("03", additionalData.children().get(0).tag());
-        assertEquals("ABC", additionalData.children().get(0).value());
+        assertEquals("03", additionalData.children().getFirst().tag());
+        assertEquals("ABC", additionalData.children().getFirst().value());
     }
 
     @Test
